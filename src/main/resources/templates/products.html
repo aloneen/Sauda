@@ -8,7 +8,14 @@
 <body>
 
 
-    SOME PRODUCT
+    <form th:action="@{'/'}" method="get">
+        Searching by name of product:
+        <input type="text" name="title"> <br>
+        <input type="submit" value="search">
+    </form>
+
+
+    ALL PRODUCTS
 
 
     <div th:each="product : ${products}">
@@ -17,12 +24,22 @@
             <p>
                 <b th:text="${product.getTitle()}"></b>
                 <div th:text="${product.getPrice()}"></div>
-                <a th:href="@{'/product/' + ${product.getId()}}"></a>
+                <a th:href="@{'/product/' + ${product.getId()}}">Details</a>
 
             </p>
         </div>
 
     </div>
+
+    <form th:action="@{'/product/create'}" method="post">
+        Title: <input type="text" name="title"> <br>
+        Desc: <input type="text" name="description"> <br>
+        Price: <input type="number" name="price"> <br>
+        City: <input type="text" name="city"> <br>
+        Name: <input type="text" name="author"> <br>
+        <input type="submit" value="Add product">
+
+    </form>
 
 
 

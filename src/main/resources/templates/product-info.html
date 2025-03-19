@@ -9,5 +9,18 @@
 
     Product info
 
+    <div>
+
+        <h2 th:text="${product.getTitle()}"></h2>
+
+        <p th:text="${product.getDescription()}">
+
+        </p>
+
+        <div th:text="${product.getPrice()}"></div>
+        <div th:text="${product.getCity()}"></div>
+
+    </div>
+
 </body>
 </html>
