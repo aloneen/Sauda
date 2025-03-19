@@ -7,7 +7,26 @@
 </head>
 <body>
 
+
     SOME PRODUCT
+
+
+    <div th:each="product : ${products}">
+
+        <div>
+            <p>
+                <b th:text="${product.getTitle()}"></b>
+                <div th:text="${product.getPrice()}"></div>
+                <a th:href="@{'/product/' + ${product.getId()}}"></a>
+
+            </p>
+        </div>
+
+    </div>
+
+
+
+
 
 </body>
 </html>
