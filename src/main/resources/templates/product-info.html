@@ -10,6 +10,13 @@
     Product info
 
     <div>
+<!--        <img th:src="@{'/images/' + ${product.getImages().get(0)}}" height="100px"> <br>-->
+<!--        <img th:src="@{'/images/' + ${product.getImages().get(1)}}" height="100px"> <br>-->
+<!--        <img th:src="@{'/images/' + ${product.getImages().get(2)}}" height="100px"> <br>-->
+        <div th:each="image : ${images}">
+            <img th:src="@{'/images/' + ${image.getId()}}" height="100px"> <br>-->
+        </div>
+
 
         <h2 th:text="${product.getTitle()}"></h2>
 

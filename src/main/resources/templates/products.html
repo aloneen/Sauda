@@ -31,12 +31,19 @@
 
     </div>
 
-    <form th:action="@{'/product/create'}" method="post">
+    <form th:action="@{'/product/create'}" method="post" enctype="multipart/form-data">
         Title: <input type="text" name="title"> <br>
         Desc: <input type="text" name="description"> <br>
         Price: <input type="number" name="price"> <br>
         City: <input type="text" name="city"> <br>
         Name: <input type="text" name="author"> <br>
+
+        First Picture: <input type="file" name="file1"> <br>
+        Second Picture: <input type="file" name="file2"> <br>
+        Third Picture: <input type="file" name="file3"> <br>
+
+
+
         <input type="submit" value="Add product">
 
     </form>
